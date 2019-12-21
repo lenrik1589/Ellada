@@ -5,6 +5,7 @@ function preload(){
 }
 function setup(){
   noCanvas();
+  showdown.setFlavor("github");
   createDiv(showdown.makeHtml(story.join('\n')));
   select("body").style("padding-left",width/4);
   select("body").style("padding-right",width/4);
