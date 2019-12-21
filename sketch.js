@@ -5,7 +5,7 @@ function preload(){
 }
 function setup(){
   noCanvas();
-  createDiv(makeHtml(story.join('\n')));
+  createDiv(showdown.makeHtml(story.join('\n')));
   select("body").style("padding-left",width/4);
   select("body").style("padding-right",width/4);
 }
