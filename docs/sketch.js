@@ -1,6 +1,6 @@
 let md = require('markdown-it')();
 function setup(){
-  print(loadBytes("../Artemiysbook/story/full.md"));
+  print(parseMd(loadBytes("../Artemiysbook/story/full.md")));
 }
 function parseMd(md){
   
