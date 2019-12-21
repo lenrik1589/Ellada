@@ -9,7 +9,5 @@ function setup(){
   showdown.Converter();
   showdown.setFlavor("github");
   d = createDiv(showdown.makeHtml(story.join('\n')));
-  d.style("padding-left",windowWidth/4);
-  d.style("padding-right",windowWidth/4);
   d.addClass('markdown-body');
 }
