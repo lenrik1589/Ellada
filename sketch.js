@@ -1,5 +1,6 @@
 // let md = require('markdown-it')();
-let story;
+let story,
+    d;
 function preload(){
   story = loadStrings("Artemiysbook/story/full.md");
 }
@@ -7,7 +8,8 @@ function setup(){
   noCanvas();
   showdown.Converter();
   showdown.setFlavor("github");
-  createDiv(showdown.makeHtml(story.join('\n')));
-  select("body").style("padding-left",width/4);
-  select("body").style("padding-right",width/4);
+  d = createDiv(showdown.makeHtml(story.join('\n')));
+  d.style("padding-left",windowWidth/4);
+  d.style("padding-right",windowWidth/4);
+  d.addClass('markdown-body');
 }
