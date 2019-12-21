@@ -1,6 +1,10 @@
-let md = require('markdown-it')();
+// let md = require('markdown-it')();
+let story;
+function preload(){
+  story = loadStrings("Artemiysbook/story/full.md");
+}
 function setup(){
-  print(parseMd(loadStrings("Artemiysbook/story/full.md").join("\n")));
+  print(parseMd(story.join('\n')));
 }
 function parseMd(md){
   
