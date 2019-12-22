@@ -2,7 +2,7 @@
 let story,
     d;
 function preload(){
-  story = loadStrings("Artemiysbook/story/full.md");
+  story = loadStrings("https://raw.githubusercontent.com/lenrik1589/Ellada/master/Artemiysbook/story/full.md");
 }
 function setup(){
   noCanvas();
