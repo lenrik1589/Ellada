@@ -14,9 +14,12 @@ code{
   margin-left: 25%;
 }
 .markdown-body blockquote {
-    padding: 0 1em;
-    color: #6a737d;
-border-left: .25em solid #dfe2e5;
+  padding: 0 1em;
+  color: dimgray;
+  border-left: .25em solid cadetblue;
+}
+.markdown-body hr {
+  color: cadetblue;
 }
 .markdown-body blockquote, .markdown-body details, .markdown-body dl, .markdown-body ol, .markdown-body p, .markdown-body pre, .markdown-body table, .markdown-body ul {
     margin-top: 0;
