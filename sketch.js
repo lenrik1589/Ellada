@@ -32,6 +32,7 @@ function setup(){
     });
   }
   console.log(story);
-  d = createDiv(story);
+  d = select(".markdown-body",document.body)
+  d.elt.innerHtml = story;
   d.addClass('markdown-body');
 }
