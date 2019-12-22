@@ -13,6 +13,18 @@ code{
   margin-right: 25%;
   margin-left: 25%;
 }
+.markdown-body blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+border-left: .25em solid #dfe2e5;
+}
+.markdown-body blockquote, .markdown-body details, .markdown-body dl, .markdown-body ol, .markdown-body p, .markdown-body pre, .markdown-body table, .markdown-body ul {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+blockquote {
+    margin: 0;
+}
 body {
   color:#24292e;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
