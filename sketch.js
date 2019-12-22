@@ -33,6 +33,6 @@ function setup(){
   }
   console.log(story);
   d = select(".markdown-body",document.body)
-  d.elt.innerHtml = story;
+  d.elt.innerHTML = story;
   d.addClass('markdown-body');
 }
