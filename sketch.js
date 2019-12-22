@@ -9,13 +9,13 @@ function setup(){
   showdown.Converter();
   showdown.setFlavor("github");
   const regex = /([0-9,\-,\u0400-\u04FF]+)top(?=\")/gm;
-  let str = showdown.makeHtml(story.join('\n'));
-  console.log(str);
+  story = showdown.makeHtml(story.join('\n'));
+  console.log(story);
   let m;
 
   let mat;
   let what;
-  while ((m = regex.exec(str)) !== null) {
+  while ((m = regex.exec(story)) !== null) {
     // This is necessary to avoid infinite loops with zero-width matches
     if (m.index === regex.lastIndex) {
       regex.lastIndex++;
@@ -23,7 +23,7 @@ function setup(){
     // The result can be accessed through the `m`-variable.
     m.forEach((match, groupIndex) => {
       if(groupIndex==1){
-        str = str.replace(what,match);
+        story = story.replace(what,match);
         console.log(`Found match, group ${groupIndex}: ${match}`);
       }else{
         console.log(`Found match, group ${groupIndex}: ${match}`);
@@ -31,7 +31,7 @@ function setup(){
       }
     });
   }
-  console.log(str);
-  d = createDiv(str);
+  console.log(story);
+  d = createDiv(story);
   d.addClass('markdown-body');
 }
