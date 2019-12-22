@@ -8,7 +8,7 @@ function setup(){
   noCanvas();
   showdown.Converter();
   showdown.setFlavor("github");
-  const regex = /([0-9,\-,\u0400-\u04FF]+)top(?=\\\")/gm;
+  const regex = /([0-9,\-,\u0400-\u04FF]+)top(?=\")/gm;
   let str = showdown.makeHtml(story.join('\n'));
   console.log(str);
   let m;
