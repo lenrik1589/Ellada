@@ -1,2 +1,2 @@
 # Ellada
-История:[здесь](Artemiysbook/story/full.md)
+История:[здесь](lenrik1589.github.io/Ellada)
