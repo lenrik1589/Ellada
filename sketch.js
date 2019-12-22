@@ -5,6 +5,9 @@ function preload(){
   story = loadStrings("Artemiysbook/story/full.md");
 }
 function setup(){
+  noCanvas();
+  showdown.Converter();
+  showdown.setFlavor("github");
   str = showdown.makeHtml(story.join('\n'));
   console.log(str);
   let m;
@@ -28,9 +31,6 @@ function setup(){
     });
   }
   console.log(str);
-  noCanvas();
-  showdown.Converter();
-  showdown.setFlavor("github");
   d = createDiv(str);
   d.addClass('markdown-body');
 }
