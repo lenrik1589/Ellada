@@ -13,8 +13,8 @@ code{
   max-width: 1012px;
   margin-right: auto;
   margin-left: auto;
-  padding-right 16 !important;
-  padding-left 16 !important;
+  padding-right 16;
+  padding-left 16;
 }
 .markdown-body blockquote {
   padding: 0 1em;
