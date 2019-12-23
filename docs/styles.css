@@ -80,6 +80,9 @@ a {
     text-decoration: none;
     background-color: initial;
 }
+.markdown-body i{
+    color: #02335d;
+}
 * {
     box-sizing: border-box;
 }
