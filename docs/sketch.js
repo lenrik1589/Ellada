@@ -1,7 +1,7 @@
 let story,
     d;
 function preload(){
-  story = loadStrings("https://raw.githubusercontent.com/lenrik1589/Ellada/master/Artemiysbook/story/full.md");
+  story = loadStrings("https://raw.githubusercontent.com/lenrik1589/Ellada/master/Artemiysbook/story/organized.md");
 }
 function setup(){
   noCanvas();
@@ -12,7 +12,6 @@ function setup(){
   console.log(story);
   let m;
 
-  let mat;
   let what;
   while ((m = regex.exec(story)) !== null) {
     // This is necessary to avoid infinite loops with zero-width matches
