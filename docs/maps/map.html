@@ -1,8 +1,8 @@
 <!DOCTYPE html UFT-8>
 <html>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-		<script>			
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> 
+		<script>
 			/**
 			* @param {string} searchTerm - Search term for Google Image search.
 			* @param {function(string,number,number)} callback - Called when an image has
@@ -11,6 +11,7 @@
 			*   The callback gets a string that describes the failure reason.
 			*/
 			function getImageUrl(searchTerm, callback, errorCallback) {
+				let key = "", cx = "003056478731837915409:conhvgaxkmt";
 				// Google image search - 100 searches per day.
 				// https://developers.google.com/image-search/
 				// var searchUrl = 'https://ajax.googleapis.com/ajax/services/search/images' +
@@ -37,21 +38,31 @@
 					console.assert(typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),'Unexpected respose from the Google Image Search API!');
 					callback(imageUrl, width, height);
 				};
-					x.onerror = function() {
-					errorCallback('Network error.');
-				};
+				x.onerror = function() {errorCallback('Network error.');};
 				x.send();
 			}
-		</script>
-		
+			let inputArea,button,adress = "",w,h;
+			function assignValues(s,W,H){adress = s;w = W;h = H;}
+			function getImage(){
+				getImageUrl(inputArea.value,assignValues,console.error)
+				console.log(adress)
+			}
+			function init(){
+				inputArea = document.body.children[1];
+				button = document.body.children[2];
+				button.onclick = getImage;
+			}
+		</script> -->
+		<script async src="https://cse.google.com/cse.js?cx=003056478731837915409:conhvgaxkmt"></script>
+
 	<head>
 		<title>map</title>
 	</head>
-	<body>
-		<svg src="~/Roshtar/drawing.svg">nothing</svg>
-  
+	<body onload="init()">
+		<!-- <svg src="./Roshtar/drawing.svg">nothing</svg>
 		<input id="focusedInput" value="decimal" >
 		<button type="submit" id="find-file">Поиск</button>
-		<img id="imgbook" width="200" src="http://javascript.ru/forum/images/smilies/smile.gif">
+		<img id="imgbook" width="200" src="http://javascript.ru/forum/images/smilies/smile.gif"> -->
+		<div class="gcse-search"></div>
 	</body>
 </html>
